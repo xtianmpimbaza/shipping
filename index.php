@@ -81,8 +81,10 @@ if (isset($_POST['submit'])) {
 
         <div class="nk-form">
             <div>
-                <!--   <i class="notika-icon notika-support"></i>-->
-                <h2>Sign In</h2>
+                <!--                   <i class="notika-icon notika-support"></i>-->
+                <img src="images/lomami.png" alt="" style="width: 200px;"/>
+<!--                <h2>Sign In</h2>-->
+                <br>
             </div>
             <div class="text-center" style="color: red"> <?php if (isset($error)) {
                     echo $error;
@@ -103,7 +105,7 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div style="padding-top: 10px">
                         <button type="submit" name="submit"
-                                class="btn btn-primary btn-sm">Sign in
+                                class="btn btn-primary btn-md">Sign in
                         </button>
                     </div>
                 </form>

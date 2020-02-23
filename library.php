@@ -141,6 +141,18 @@ function checkUser($un, $pwd)
     }
 }
 
+function getProfile($id)
+{
+    $sql = "SELECT * FROM tbl_courier_officers WHERE cid = '$id'";
+    $resulta = dbQuery($sql);
+    $num = dbNumRows($resulta);
+    if ($num >= 1) {
+        return dbFetchAssoc($resulta);
+    } else {
+        return [];
+    }
+}
+
 function isUser()
 {
     if (!isset($_SESSION['user_name'])) {
@@ -171,6 +183,8 @@ function countShippings()
         return [];
     }
 }
+
+
 
 
 

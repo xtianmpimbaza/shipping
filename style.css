@@ -4633,3 +4633,21 @@ body.box-layout {
 /*----------------------------------------*/
 .mCS-light-1.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #0a2f5b; }
 .mCS-light-1.mCSB_scrollTools .mCSB_draggerRail{ background-color: #ccc; }
+
+/*-----------------Profile------------------*/
+.prodn h6 {
+    width: 250px;
+}
+
+h5, h6 {
+    font-weight: 400;
+}
+h6 {
+    font-weight: bolder;
+    color: #1c1c1c;
+    font-size: 14px;
+}
+p, h6 {
+    display: inline-block;
+    /* width: 60%; */
+}

@@ -4,6 +4,7 @@ require_once('database.php');
 require_once('library.php');
 isUser();
 
+$route = "pending-shipments";
 $sql = "SELECT cid, cons_no, ship_name, rev_name, pick_date, pick_time, status
 		FROM tbl_courier
 		WHERE status = 'Pending'

@@ -2,6 +2,7 @@
 session_start();
 require_once('library.php');
 isUser();
+$route = "dashboard";
 
 $tt_delayed = 0;
 $tt_pending = 0;
@@ -135,8 +136,7 @@ if (!empty($ships)){
                 <div class="sale-statistic-inner notika-shadow mg-tb-30">
                     <div class="curved-inner-pro">
                         <div class="curved-ctn">
-                            <h2>Sales Statistics</h2>
-                            <p>Vestibulum purus quam scelerisque, mollis nonummy metus</p>
+                            <h2>Shipping Statistics</h2>
                         </div>
                     </div>
                     <div id="bar-chart" class="flot-chart bar-three bar-hm-three"></div>

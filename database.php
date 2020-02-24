@@ -2,15 +2,15 @@
 
 
 // database connection config
-//$dbHost = 'localhost';
-//$dbUser = 'sageacad';
-//$dbPass = 'Academia@2019';
-//$dbName = 'sageacad_courier_db';
-
 $dbHost = 'localhost';
-$dbUser = 'root';
-$dbPass = '';
+$dbUser = 'sageacad';
+$dbPass = 'Academia@2020';
 $dbName = 'sageacad_courier_db';
+
+//$dbHost = 'localhost';
+//$dbUser = 'root';
+//$dbPass = '';
+//$dbName = 'sageacad_courier_db';
 
 $dbConn = mysqli_connect ($dbHost, $dbUser, $dbPass, $dbName) or die ('MySQLi connect failed. ' . mysqli_error($dbConn));
 mysqli_select_db($dbConn,$dbName) or die('Cannot select database. ' . mysqli_error($dbConn));

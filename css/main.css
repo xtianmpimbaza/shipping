@@ -321,6 +321,9 @@ input.text {
     background-color: #F3F3F3;
 }
 
+.coutier_tbl tr td{
+    padding: 5px;
+}
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.

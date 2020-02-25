@@ -5,7 +5,7 @@ $rand = get_rand_id(8);
 //echo $rand;
 
 $route = "add-courier";
-
+$invoice_no = rand(1000,9999);
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -14,7 +14,7 @@ $route = "add-courier";
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Data Table | Notika - Notika Admin Template</title>
+    <title>LOMAMI</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -59,6 +59,7 @@ $route = "add-courier";
     <!-- main CSS
 		============================================ -->
     <link rel="stylesheet" href="css/main.css">
+
     <!-- style CSS
 		============================================ -->
     <link rel="stylesheet" href="style.css">
@@ -452,7 +453,7 @@ $route = "add-courier";
                                     </tbody>
                                 </table>
                             </div>
-                            <table border="0" cellpadding="0" cellspacing="0" align="center" width="75%">
+                            <table  align="center" class="coutier_tbl">
                                 <tbody>
                                 <tr>
                                     <td width="18"><img src="images/boxtopleftcorner.gif" alt="" height="13" width="18">
@@ -503,12 +504,13 @@ $route = "add-courier";
                                                             <td>&nbsp;</td>
                                                             <td><input name="Shipperphone" id="Shipperphone"
                                                                        maxlength="13" size="40"
-                                                                       type="TEXT"></td>
+                                                                       onkeypress='validate(event)'
+                                                                       type="number"></td>
                                                         </tr>
                                                         <tr>
                                                             <td class="TrackMediumBlue" align="right">Email :</td>
                                                             <td>&nbsp;</td>
-                                                            <td><input name="Shipperemail" id="Shipperemail" size="40"
+                                                            <td><input name="Shipperemail" id="Shipperemail"
                                                                        type="email"></td>
                                                         </tr>
                                                         <tr>
@@ -545,13 +547,13 @@ $route = "add-courier";
                                                             <td>&nbsp;</td>
                                                             <td><input name="Receiverphone" id="Receiverphone"
                                                                        maxlength="13" size="40"
-                                                                       type="TEXT"></td>
+                                                                       onkeypress='validate(event)'
+                                                                       type="number"></td>
                                                         </tr>
                                                         <tr>
                                                             <td class="TrackMediumBlue" align="right">Email :</td>
                                                             <td>&nbsp;</td>
-                                                            <td><input name="Receiveremail" id="Receiveremail"
-                                                                       maxlength="13" size="40"
+                                                            <td><input name="Receiveremail" id="Receiveremail" size="40"
                                                                        type="email"></td>
                                                         </tr>
                                                         <tr>
@@ -622,6 +624,7 @@ $route = "add-courier";
                                                             <td class="TrackMediumBlue" align="right">Weight :</td>
                                                             <td>&nbsp;</td>
                                                             <td><input id="Weight" size="10" maxlength="10"
+                                                                       onkeypress='validate(event)'
                                                                        name="Weight">
                                                                 (kg)
                                                             </td>
@@ -629,16 +632,15 @@ $route = "add-courier";
                                                         <tr>
                                                             <td class="TrackMediumBlue" align="right">Invoice no :</td>
                                                             <td>&nbsp;</td>
-                                                            <td><input name="Invoiceno" id="Invoiceno" size="40"
-                                                                       maxlength="20"
-                                                                       onKeyUp="check_phone('Invoiceno')" type="TEXT">
+                                                            <td><input name="Invoiceno" id="Invoiceno" value="<?php echo $invoice_no;?>" type="number">
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="TrackMediumBlue" align="right">Qnty :</td>
+                                                            <td class="TrackMediumBlue" align="right">Quantity :</td>
                                                             <td>&nbsp;</td>
                                                             <td><input name="Qnty" id="Qnty" maxlength="10" size="20"
-                                                                       type="TEXT"></td>
+                                                                       onkeypress='validate(event)'
+                                                                       type="number"></td>
                                                         </tr>
                                                         <tr>
                                                             <td class="TrackMediumBlue" align="right">Booking Mode :
@@ -656,6 +658,8 @@ $route = "add-courier";
                                                             </td>
                                                             <td>&nbsp;</td>
                                                             <td><input id="Totalfreight" size="10" maxlength="13"
+                                                                       type="number"
+                                                                       onkeypress='validate(event)'
                                                                        name="Totalfreight">
                                                             </td>
                                                         </tr>
@@ -734,9 +738,8 @@ $route = "add-courier";
                                                         <tr>
                                                             <td align="right">&nbsp;</td>
                                                             <td>&nbsp;</td>
-                                                            <td><input name="Submit" type="submit"
-                                                                       onClick="MM_validateForm('Shippername','','R','Shipperphone','','R','Receivername','','R','Receiverphone','','R','ConsignmentNo','','R','Weight','','R','Invoiceno','','R','Qnty','','RisNum','Totalfreight','','R','Pickuptime','','R','Shipperaddress','','R','Comments','','R','Weight','','RisNum','Totalfreight','','R');return document.MM_returnValue"
-                                                                       value="Add Courier"></td>
+                                                            <td><button class="btn btn-primary btn-sm" name="Submit" type="submit"
+                                                                       onClick="MM_validateForm('Shippername','','R','Shipperphone','','R','Receivername','','R','Receiverphone','','R','ConsignmentNo','','R','Weight','','R','Invoiceno','','R','Qnty','','RisNum','Totalfreight','','R','Pickuptime','','R','Shipperaddress','','R','Comments','','R','Weight','','RisNum','Totalfreight','','R');return document.MM_returnValue">Add Courier</button></td>
                                                         </tr>
                                                         </tbody>
                                                     </table>
@@ -840,6 +843,25 @@ $route = "add-courier";
 <!-- tawk chat JS
     ============================================ -->
 <script src="js/tawk-chat.js"></script>
+<script>
+    function validate(evt) {
+        var theEvent = evt || window.event;
+
+        // Handle paste
+        if (theEvent.type === 'paste') {
+            key = event.clipboardData.getData('text/plain');
+        } else {
+            // Handle key press
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode(key);
+        }
+        var regex = /[0-9]|\./;
+        if( !regex.test(key) ) {
+            theEvent.returnValue = false;
+            if(theEvent.preventDefault) theEvent.preventDefault();
+        }
+    }
+</script>
 </body>
 
 </html>

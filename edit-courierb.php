@@ -4,6 +4,7 @@ require_once('database.php');
 require_once('library.php');
 isUser();
 $cid = (int)$_GET['cid'];
+$route = "";
 
 $sql = "SELECT *
 		FROM tbl_courier
@@ -14,6 +15,7 @@ $result = dbQuery($sql);
 $result_1 = dbQuery($sql_1);
 while ($data = dbFetchAssoc($result)) {
 extract($data);
+
 ?>
 <!doctype html>
 <html class="no-js" lang="">

@@ -30,8 +30,8 @@ function dbAffectedRows()
 	return mysqli_affected_rows($dbConn);
 }
 
-function dbFetchArray($result, $resultType = MYSQL_NUM) {
-	return mysqli_fetch_array($result, $resultType);
+function dbFetchArray($result) {
+	return mysqli_fetch_array($result);
 }
 
 function dbFetchAssoc($result)

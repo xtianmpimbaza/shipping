@@ -700,10 +700,10 @@ $invoice_no = rand(1000,9999);
 <!--                                                                       style="cursor: text;" onClick="ds_sh(this);"-->
 <!--                                                                       maxlength="15"-->
 <!--                                                                       type="TEXT" value="">-->
-                                                                <input name="Packupdate" id="Packupdate" readonly="True"
+                                                                <input name="Packupdate" id="Packupdate"
                                                                        style="cursor: text;"
-                                                                       onClick="ds_sh(this);" maxlength="15" type="TEXT"
-                                                                       value="">
+                                                                       placeholder="DD/MM/YYYY"
+                                                                        type="TEXT">
                                                                 <span class="REDLink">*</span></td>
                                                         </tr>
                                                         <tr>

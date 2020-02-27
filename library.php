@@ -184,8 +184,23 @@ function countShippings()
     }
 }
 
+// Select todays records only
+function countShippingsTd()
+{
+    $sql = "SELECT count(case when tbl_courier.status='Canceled ' then 1 end) AS canceled
+  ,count(case when tbl_courier.status='Pending ' then 1 end) AS pending
+  ,count(case when tbl_courier.status='Delayed ' then 1 end) AS delay
+  ,count(case when tbl_courier.status='Delivered ' then 1 end) AS delivered
+  ,count(case when tbl_courier.status='In Transit ' then 1 end) AS intransit FROM `tbl_courier` WHERE DATE(`tstamp`) = CURDATE()";
+    $resulta = dbQuery($sql);
 
-
+    $num = dbNumRows($resulta);
+    if ($num >= 1) {
+        return dbFetchAssoc($resulta);
+    } else {
+        return [];
+    }
+}
 
 
 ?>

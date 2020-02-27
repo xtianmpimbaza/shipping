@@ -18,6 +18,17 @@ if (!empty($ships)){
     $tt_delivered = $ships['delivered'];
     $tt_cancelled = $ships['canceled'];
 }
+
+$ships_td = countShippingsTd();
+if (!empty($ships_td)){
+    $td_delayed = $ships_td['delay'];
+    $td_transit = $ships_td['intransit'];
+    $td_pending = $ships_td['pending'];
+    $td_delivered = $ships_td['delivered'];
+    $td_cancelled = $ships_td['canceled'];
+}
+
+
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -139,7 +150,10 @@ if (!empty($ships)){
                             <h2>Shipping Statistics</h2>
                         </div>
                     </div>
-                    <div id="bar-chart" class="flot-chart bar-three bar-hm-three"></div>
+<!--            --------------------        graph chart-->
+<!--                    <div class="" id="graph"><h1></h1></div>-->
+                    <div id="graph" class="flot-chart bar-three bar-hm-three"></div>
+<!--                    <div id="bar-chart" class="flot-chart bar-three bar-hm-three"></div>-->
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
@@ -151,7 +165,7 @@ if (!empty($ships)){
                     <div class="dash-widget-visits"></div>
                     <div class="past-statistic-an">
                         <div class="past-statistic-ctn">
-                            <h3><span class="counter">3,20,000</span></h3>
+                            <h3><span class="counter"><?php echo $td_transit;?></span></h3>
                             <p>Page Views</p>
                         </div>
                         <div class="past-statistic-graph">
@@ -160,7 +174,7 @@ if (!empty($ships)){
                     </div>
                     <div class="past-statistic-an">
                         <div class="past-statistic-ctn">
-                            <h3><span class="counter">1,03,000</span></h3>
+                            <h3><span class="counter"><?php echo $td_pending;?></span></h3>
                             <p>Total Clicks</p>
                         </div>
                         <div class="past-statistic-graph">
@@ -169,7 +183,7 @@ if (!empty($ships)){
                     </div>
                     <div class="past-statistic-an">
                         <div class="past-statistic-ctn">
-                            <h3><span class="counter">24,00,000</span></h3>
+                            <h3><span class="counter"><?php echo $td_delivered;?></span></h3>
                             <p>Site Visitors</p>
                         </div>
                         <div class="past-statistic-graph">
@@ -226,8 +240,12 @@ if (!empty($ships)){
     ============================================ -->
 <script src="js/sparkline/jquery.sparkline.min.js"></script>
 <script src="js/sparkline/sparkline-active.js"></script>
-<!-- flot JS
+<!-- charts
     ============================================ -->
+<!-- HighCharts  -->
+<script src="js/highcharts/highcharts.js"></script>
+<script src="js/highcharts/exporting.js"></script>
+<!--Flot-->
 <script src="js/flot/jquery.flot.js"></script>
 <script src="js/flot/jquery.flot.resize.js"></script>
 <script src="js/flot/jquery.flot.pie.js"></script>
@@ -259,7 +277,26 @@ if (!empty($ships)){
 <script src="js/main.js"></script>
 <!-- tawk chat JS
     ============================================ -->
-<script src="js/tawk-chat.js"></script>
+<!--<script src="js/tawk-chat.js"></script>-->
+<script>
+    $(document).ready(function () {
+        loadGraph();
+    });
+    function loadGraph() {
+        $.ajax({
+            type: "POST",
+            url: "loader/dataloader.php",
+            data: {
+                token: "load_graph"
+            },
+            success: function (data) {
+                console.log(data);
+                $('#graph').highcharts(JSON.parse(data));
+            }
+
+        })
+    }
+</script>
 </body>
 
 </html>

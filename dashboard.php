@@ -162,11 +162,11 @@ if (!empty($ships_td)){
                         <h2>Today</h2>
                         <p>A summary of oday's shippings.</p>
                     </div>
-                    <div class="dash-widget-visits"></div>
+<!--                    <div class="dash-widget-visits"></div>-->
                     <div class="past-statistic-an">
                         <div class="past-statistic-ctn">
                             <h3><span class="counter"><?php echo $td_transit;?></span></h3>
-                            <p>Page Views</p>
+                            <p>In Transit</p>
                         </div>
                         <div class="past-statistic-graph">
                             <div class="stats-bar"></div>
@@ -175,7 +175,7 @@ if (!empty($ships_td)){
                     <div class="past-statistic-an">
                         <div class="past-statistic-ctn">
                             <h3><span class="counter"><?php echo $td_pending;?></span></h3>
-                            <p>Total Clicks</p>
+                            <p>Pending</p>
                         </div>
                         <div class="past-statistic-graph">
                             <div class="stats-line"></div>
@@ -184,12 +184,22 @@ if (!empty($ships_td)){
                     <div class="past-statistic-an">
                         <div class="past-statistic-ctn">
                             <h3><span class="counter"><?php echo $td_delivered;?></span></h3>
-                            <p>Site Visitors</p>
+                            <p>Delivered</p>
                         </div>
                         <div class="past-statistic-graph">
                             <div class="stats-bar-2"></div>
                         </div>
                     </div>
+                    <div class="past-statistic-an">
+                        <div class="past-statistic-ctn">
+                            <h3><span class="counter"><?php echo $td_cancelled;?></span></h3>
+                            <p>Cancelled</p>
+                        </div>
+                        <div class="past-statistic-graph">
+                            <div class="stats-bar-2"></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

@@ -122,47 +122,63 @@ if (!empty($profile)) {
 </div>
 <!-- Breadcomb area End-->
 <!-- Data Table area Start-->
+
 <div class="data-table-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-example-wrap">
 
+                    <div>
+                        <div class="panel modal-login">
+                            <div class="panel-body">
+                                <div class="modal-header">
 
-                    <!--    ======================================================================================================-->
-                    <div class="card prodn col-md-8 col-md-offset-2">
-                        <div class="caption">
-                            <div>
-                                <h6>Name</h6>
-                                <p><?php echo $name; ?></p>
-                                <hr>
-                                <h6>Email</h6>
-                                <p> <?php echo $email; ?></p>
-                                <hr>
-                                <h6>Contact</h6>
-                                <p> <?php echo $ph_no; ?></p>
-                                <hr>
-                                <h6>Office</h6>
-                                <p><?php echo $office; ?></p>
-                                <hr>
-                                <h6>Registration date</h6>
-                                <p><?php echo $reg_date; ?></p>
-                                <hr>
-                                <h6>Type</h6>
-                                <p><?php echo $user_type == "officer" ? "Officer" : "Admin"; ?></p>
-                                <hr>
-                                <h6>Address</h6>
-                                <p><?php echo $address; ?></p>
-                                <hr>
+                                </div>
+
+                                <!--    ======================================================================================================-->
+                                <div class="card prodn col-md-8 col-md-offset-2">
+                                    <br>
+                                    <br>
+                                    <div class="caption">
+                                        <div>
+                                            <h6>Name</h6>
+                                            <p><?php echo $name; ?></p>
+                                            <hr>
+                                            <h6>Email</h6>
+                                            <p> <?php echo $email; ?></p>
+                                            <hr>
+                                            <h6>Contact</h6>
+                                            <p> <?php echo $ph_no; ?></p>
+                                            <hr>
+                                            <h6>Office</h6>
+                                            <p><?php echo $office; ?></p>
+                                            <hr>
+                                            <h6>Registration date</h6>
+                                            <p><?php echo $reg_date; ?></p>
+                                            <hr>
+                                            <h6>Type</h6>
+                                            <p><?php echo $user_type == "officer" ? "Officer" : "Admin"; ?></p>
+                                            <hr>
+                                            <h6>Address</h6>
+                                            <p><?php echo $address; ?></p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--    ======================================================================================================-->
+
                             </div>
                         </div>
-                    </div>
-                    <!--    ======================================================================================================-->
 
+                    </div>
+
+
+                </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Data Table area End-->
 <!-- Start Footer area-->
 <?php include 'footer.php'; ?>
 <!-- End Footer area-->
@@ -201,9 +217,9 @@ if (!empty($profile)) {
 <script src="js/sparkline/sparkline-active.js"></script>
 <!-- flot JS
     ============================================ -->
-<script src="js/flot/jquery.flot.js"></script>
-<script src="js/flot/jquery.flot.resize.js"></script>
-<script src="js/flot/flot-active.js"></script>
+<!--<script src="js/flot/jquery.flot.js"></script>-->
+<!--<script src="js/flot/jquery.flot.resize.js"></script>-->
+<!--<script src="js/flot/flot-active.js"></script>-->
 <!-- knob JS
     ============================================ -->
 <script src="js/knob/jquery.knob.js"></script>
@@ -231,7 +247,6 @@ if (!empty($profile)) {
 <script src="js/main.js"></script>
 <!-- tawk chat JS
     ============================================ -->
-<script src="js/tawk-chat.js"></script>
 </body>
 
 </html>

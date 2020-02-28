@@ -5,7 +5,7 @@ $rand = get_rand_id(8);
 //echo $rand;
 
 $route = "add-courier";
-$invoice_no = rand(1000,9999);
+$invoice_no = rand(1000, 9999);
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -413,15 +413,14 @@ $invoice_no = rand(1000,9999);
                                     <i class="notika-icon notika-windows"></i>
                                 </div>
                                 <div class="breadcomb-ctn">
-                                    <h2>Add </h2>
+                                    <h2>New Shipment </h2>
                                     <p>Add new shipment</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
                             <div class="breadcomb-report">
-                                <!--                                <button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn">-->
-                                <!--                                    <i class="notika-icon notika-sent"></i></button>-->
+
                             </div>
                         </div>
                     </div>
@@ -453,7 +452,7 @@ $invoice_no = rand(1000,9999);
                                     </tbody>
                                 </table>
                             </div>
-                            <table  align="center" class="coutier_tbl">
+                            <table align="center" class="coutier_tbl">
                                 <tbody>
                                 <tr>
                                     <td width="18"><img src="images/boxtopleftcorner.gif" alt="" height="13" width="18">
@@ -632,7 +631,8 @@ $invoice_no = rand(1000,9999);
                                                         <tr>
                                                             <td class="TrackMediumBlue" align="right">Invoice no :</td>
                                                             <td>&nbsp;</td>
-                                                            <td><input name="Invoiceno" id="Invoiceno" value="<?php echo $invoice_no;?>" type="number">
+                                                            <td><input name="Invoiceno" id="Invoiceno"
+                                                                       value="<?php echo $invoice_no; ?>" type="number">
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -696,14 +696,14 @@ $invoice_no = rand(1000,9999);
                                                             <td class="TrackNormalBlue" align="right">Pickup Date :</td>
                                                             <td>&nbsp;</td>
                                                             <td>
-<!--                                                                <input name="Packupdate" id="Packupdate" readonly="True"-->
-<!--                                                                       style="cursor: text;" onClick="ds_sh(this);"-->
-<!--                                                                       maxlength="15"-->
-<!--                                                                       type="TEXT" value="">-->
+                                                                <!--                                                                <input name="Packupdate" id="Packupdate" readonly="True"-->
+                                                                <!--                                                                       style="cursor: text;" onClick="ds_sh(this);"-->
+                                                                <!--                                                                       maxlength="15"-->
+                                                                <!--                                                                       type="TEXT" value="">-->
                                                                 <input name="Packupdate" id="Packupdate"
                                                                        style="cursor: text;"
                                                                        placeholder="DD/MM/YYYY"
-                                                                        type="TEXT">
+                                                                       type="TEXT">
                                                                 <span class="REDLink">*</span></td>
                                                         </tr>
                                                         <tr>
@@ -738,8 +738,30 @@ $invoice_no = rand(1000,9999);
                                                         <tr>
                                                             <td align="right">&nbsp;</td>
                                                             <td>&nbsp;</td>
-                                                            <td><button class="btn btn-primary btn-sm" name="Submit" type="submit"
-                                                                       onClick="MM_validateForm('Shippername','','R','Shipperphone','','R','Receivername','','R','Receiverphone','','R','ConsignmentNo','','R','Weight','','R','Invoiceno','','R','Qnty','','RisNum','Totalfreight','','R','Pickuptime','','R','Shipperaddress','','R','Comments','','R','Weight','','RisNum','Totalfreight','','R');return document.MM_returnValue">Add Courier</button></td>
+                                                            <td>
+                                                                <span class="" style=""><button class="btn btn-primary btn-sm"
+                                                                              name="Submit"
+                                                                              type="submit"
+                                                                              onClick="MM_validateForm('Shippername','','R','Shipperphone','','R','Receivername','','R','Receiverphone','','R','ConsignmentNo','','R','Weight','','R','Invoiceno','','R','Qnty','','RisNum','Totalfreight','','R','Pickuptime','','R','Shipperaddress','','R','Comments','','R','Weight','','RisNum','Totalfreight','','R');return document.MM_returnValue">
+                                                                    Add Courier
+                                                                </button>
+                                                                </span>
+                                                                <span class="" style=""><button class="btn btn-warning btn-sm"
+                                                                              name="Submit"
+                                                                              type="submit"
+                                                                              onClick="MM_validateForm('Shippername','','R','Shipperphone','','R','Receivername','','R','Receiverphone','','R','ConsignmentNo','','R','Weight','','R','Invoiceno','','R','Qnty','','RisNum','Totalfreight','','R','Pickuptime','','R','Shipperaddress','','R','Comments','','R','Weight','','RisNum','Totalfreight','','R');return document.MM_returnValue">
+                                                                    Print
+                                                                </button>
+                                                                </span>
+                                                                <span class="" style=""><button class="btn btn-success btn-sm"
+                                                                              name="Submit"
+                                                                              type="submit"
+                                                                              onClick="MM_validateForm('Shippername','','R','Shipperphone','','R','Receivername','','R','Receiverphone','','R','ConsignmentNo','','R','Weight','','R','Invoiceno','','R','Qnty','','RisNum','Totalfreight','','R','Pickuptime','','R','Shipperaddress','','R','Comments','','R','Weight','','RisNum','Totalfreight','','R');return document.MM_returnValue">
+                                                                    Send mail
+                                                                </button>
+                                                                </span>
+
+                                                            </td>
                                                         </tr>
                                                         </tbody>
                                                     </table>
@@ -842,7 +864,7 @@ $invoice_no = rand(1000,9999);
 <script src="js/main.js"></script>
 <!-- tawk chat JS
     ============================================ -->
-<script src="js/tawk-chat.js"></script>
+<!--<script src="js/tawk-chat.js"></script>-->
 <script>
     function validate(evt) {
         var theEvent = evt || window.event;
@@ -856,9 +878,9 @@ $invoice_no = rand(1000,9999);
             key = String.fromCharCode(key);
         }
         var regex = /[0-9]|\./;
-        if( !regex.test(key) ) {
+        if (!regex.test(key)) {
             theEvent.returnValue = false;
-            if(theEvent.preventDefault) theEvent.preventDefault();
+            if (theEvent.preventDefault) theEvent.preventDefault();
         }
     }
 </script>

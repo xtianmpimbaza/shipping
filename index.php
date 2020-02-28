@@ -14,6 +14,7 @@ if (isset($_POST['submit'])) {
         $error = "Wrong user or password";
     }
 }
+
 ?>
 <!doctype html>
 <html class="no-js" lang="">

@@ -1,11 +1,25 @@
 <?php
 session_start();
 require_once('library.php');
-$rand = get_rand_id(8);
-//echo $rand;
 
 $route = "add-user";
-$invoice_no = rand(1000,9999);
+
+if (isset($_POST['submit'])) {
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
+    $full_namespass = $_POST['full_names'];
+    $address = $_POST['address'];
+    $phone_number = $_POST['phone_number'];
+    $office = $_POST['office'];
+    $user_type = $_POST['user_type'];
+
+    $sql = "INSERT INTO tbl_courier_officers (officer_name, off_pwd, address, email, ph_no, office, user_type )
+			VALUES('$full_namespass', '$pass','$address', '$email', '$phone_number','$office','$user_type')";
+    $result = dbQuery($sql);
+    if ($result == 1){
+        $error = "Saved successifully";
+    }
+}
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -90,8 +104,8 @@ $invoice_no = rand(1000,9999);
                                     <i class="notika-icon notika-windows"></i>
                                 </div>
                                 <div class="breadcomb-ctn">
-                                    <h2>Add </h2>
-                                    <p>Add new shipment</p>
+                                    <h2>New User </h2>
+                                    <p>Add new User</p>
                                 </div>
                             </div>
                         </div>
@@ -106,342 +120,159 @@ $invoice_no = rand(1000,9999);
         </div>
     </div>
 </div>
-<!-- Breadcomb area End-->
 <!-- Data Table area Start-->
 <div class="data-table-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="form-example-wrap">
-                    <!--                   =========================================================================================== start inner body-->
 
-                    <div class="">
-                        <form action="process.php?action=add-cons" method="post" name="frmShipment">
-                            <div class="gentxt" align="right">
-                                <table border="0" cellpadding="1" cellspacing="1" align="center" width="83%">
-                                    <tbody>
-                                    <tr>
-                                        <td width="60%">&nbsp;</td>
-                                        <td width="40%">
-                                            <div align="right"></div>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                    <div>
+                        <div class="panel modal-login">
+                            <div class="panel-body text-center">
+                                <div class="modal-header">
+
+                                </div>
+                                <div class="error text-center" style="color: red"> <?php if (isset($error)) {
+                                        echo $error;
+                                    } ?></div>
+                                <div class="modal-body col-lg-6 col-lg-offset-3 col-md-12">
+
+                                    <form method="post">
+                                        <div class="form-example-int form-horizental">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="hrzn-fm">Full Names :</label>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                        <div class="nk-int-st">
+                                                            <input type="text" class="form-control input-sm" name="full_names"
+                                                                   placeholder="Enter Full Names">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-example-int form-horizental">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="hrzn-fm">Phone number :</label>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                        <div class="nk-int-st">
+                                                            <input type="text" class="form-control" name="phone_number"
+                                                                   placeholder="Mobile Number"
+                                                                   required="required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-example-int form-horizental">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="hrzn-fm">Address :</label>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                        <div class="nk-int-st">
+                                                            <input type="text" class="form-control" name="address"
+                                                                   placeholder="Address"
+                                                                   required="required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-example-int form-horizental">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="hrzn-fm">Office :</label>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                        <div class="nk-int-st">
+                                                            <input class="form-control" name="office"
+                                                                   placeholder="Office" required="required" type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-example-int form-horizental">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="hrzn-fm">Email Address :</label>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                        <div class="nk-int-st">
+                                                            <input type="text" class="form-control input-sm" name="email"
+                                                                   placeholder="Enter Email">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-example-int form-horizental mg-t-15">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                        <label class="hrzn-fm">Password :</label>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                        <div class="nk-int-st">
+                                                            <input type="text" class="form-control input-sm" name="password"
+                                                                   placeholder="Password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-example-int form-horizental mg-t-15">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                    <label class="hrzn-fm">Role :</label>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                               name="user_type" id="exampleRadios1" value="admin-role"
+                                                               checked>
+                                                        <label class="form-check-label" for="exampleRadios1">
+                                                            Admin
+                                                        </label>
+                                                        <input class="form-check-input" type="radio"
+                                                               name="user_type" id="exampleRadios2" value="officer">
+                                                        <label class="form-check-label" for="exampleRadios2">
+                                                            Officer
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-example-int mg-t-15">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                    <button type="submit" class="btn btn-primary notika-btn-primary" name="submit">Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
                             </div>
-                            <table  align="center" class="coutier_tbl">
-                                <tbody>
-                                <tr>
-                                    <td width="18"><img src="images/boxtopleftcorner.gif" alt="" height="13" width="18">
-                                    </td>
-                                    <td background="images/boxtopBG.gif" width="734"></td>
-                                    <td width="18"><img src="images/boxtoprightcorner.gif" alt="" height="13"
-                                                        width="18"></td>
-                                </tr>
-                                <tr>
-                                    <td background="images/boxleftBG.gif"></td>
-                                    <td>
-                                        <table border="0" cellpadding="0" cellspacing="0" align="center" width="98%">
-                                            <tbody>
-                                            <tr>
-                                                <td colspan="2" height="4"></td>
-                                            </tr>
-                                            <tr>
-                                                <td height="18">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <table class="Partext1" cellpadding="2" cellspacing="2"
-                                                           align="center" width="100%">
-                                                        <tbody>
-                                                        <tr>
-                                                            <?php
-
-                                                            ?>
-                                                            <td colspan="3" class="TrackMediumBlue" align="right">
-                                                                <div class="gentxt" align="right">
-                                                                    <div class="headtext13" align="left"><strong>Sender's
-                                                                            info
-                                                                            : </strong></div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right" width="138">
-                                                                Sender's Name :
-                                                            </td>
-                                                            <td>&nbsp;</td>
-                                                            <td>
-                                                                <input name="Shippername" size="40" type="TEXT">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Phone :</td>
-                                                            <td>&nbsp;</td>
-                                                            <td><input name="Shipperphone" id="Shipperphone"
-                                                                       maxlength="13" size="40"
-                                                                       onkeypress='validate(event)'
-                                                                       type="number"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Email :</td>
-                                                            <td>&nbsp;</td>
-                                                            <td><input name="Shipperemail" id="Shipperemail"
-                                                                       type="email"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Address :</td>
-                                                            <td>&nbsp;</td>
-                                                            <td><span class="REDLink">
-              <textarea name="Shipperaddress" cols="27" rows="2" id="Shipperaddress"></textarea>
-              *</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">&nbsp;</td>
-                                                            <td>&nbsp;</td>
-                                                            <td>&nbsp;</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="3" class="TrackMediumBlue" align="right">
-                                                                <div class="headtext13" align="left"><strong>Receiver's
-                                                                        info : </strong>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Receiver's Name
-                                                                :
-                                                            </td>
-                                                            <td>&nbsp;</td>
-                                                            <td><input name="Receivername" id="Receivername"
-                                                                       maxlength="100" size="40"
-                                                                       type="TEXT">
-                                                                <span class="REDLink">*</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Phone :</td>
-                                                            <td>&nbsp;</td>
-                                                            <td><input name="Receiverphone" id="Receiverphone"
-                                                                       maxlength="13" size="40"
-                                                                       onkeypress='validate(event)'
-                                                                       type="number"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Email :</td>
-                                                            <td>&nbsp;</td>
-                                                            <td><input name="Receiveremail" id="Receiveremail" size="40"
-                                                                       type="email"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right"> Address: :</td>
-                                                            <td>&nbsp;</td>
-                                                            <td><span class="REDLink">
-              <textarea name="Receiveraddress" cols="27" rows="2" id="Receiveraddress"></textarea>
-              *</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">&nbsp;</td>
-                                                            <td>&nbsp;</td>
-                                                            <td>&nbsp;</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="3" class="TrackMediumBlue" align="right">
-                                                                <div class="headtext13" align="left"><strong>Shipment
-                                                                        info : </strong>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Consignment No :
-                                                            </td>
-                                                            <td width="13">&nbsp;</td>
-                                                            <td width="477">
-                                                                <input name="ConsignmentNo"
-                                                                       value="<?php echo "LTALW" . strtoupper($rand); ?>"
-                                                                       id="ConsignmentNo" readonly="true"
-                                                                       maxlength="13"
-                                                                       size="40" type="TEXT">
-                                                                <span class="REDLink">*</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Type of Shipment
-                                                                :
-                                                            </td>
-                                                            <td>&nbsp;</td>
-                                                            <td><select id="Shiptype" name="Shiptype">
-                                                                    <option value="Regular mail" selected="selected">
-                                                                        Regular mail
-                                                                    </option>
-                                                                    <option value="Propert titles">Property titles
-                                                                    </option>
-                                                                    <option value="Bank securities">Bank Securities
-                                                                    </option>
-                                                                    <option value="Pharmaceutical products">
-                                                                        Pharmaceutical products
-                                                                    </option>
-                                                                    <option value="Ordinary packages">Ordinary
-                                                                        Packages
-                                                                    </option>
-                                                                    <option value="Parcel">Parcel</option>
-                                                                    <option value="Computer hardware">Computer
-                                                                        Hardware
-                                                                    </option>
-                                                                    <option value="Laptop">Laptop</option>
-                                                                    <option value="Portable Tablet">Portable Tablet
-                                                                    </option>
-                                                                    <option value="Portable ipad">Portable ipad</option>
-                                                                    <option value="Cell phone">Cell phone</option>
-                                                                    <option value="Accessories">Accessories</option>
-
-                                                                </select>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Weight :</td>
-                                                            <td>&nbsp;</td>
-                                                            <td><input id="Weight" size="10" maxlength="10"
-                                                                       onkeypress='validate(event)'
-                                                                       name="Weight">
-                                                                (kg)
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Invoice no :</td>
-                                                            <td>&nbsp;</td>
-                                                            <td><input name="Invoiceno" id="Invoiceno" value="<?php echo $invoice_no;?>" type="number">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Quantity :</td>
-                                                            <td>&nbsp;</td>
-                                                            <td><input name="Qnty" id="Qnty" maxlength="10" size="20"
-                                                                       onkeypress='validate(event)'
-                                                                       type="number"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Booking Mode :
-                                                            </td>
-                                                            <td>&nbsp;</td>
-                                                            <td><select name="Bookingmode" id="Bookingmode">
-                                                                    <option selected="selected" value="Paid">Paid
-                                                                    </option>
-                                                                    <option value="ToPay">ToPay</option>
-                                                                    <option value="TBB">TBB</option>
-                                                                </select></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Total freight :
-                                                            </td>
-                                                            <td>&nbsp;</td>
-                                                            <td><input id="Totalfreight" size="10" maxlength="13"
-                                                                       type="number"
-                                                                       onkeypress='validate(event)'
-                                                                       name="Totalfreight">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackMediumBlue" align="right">Mode :</td>
-                                                            <td>&nbsp;</td>
-                                                            <td><select name="Mode" id="Mode">
-                                                                    <option selected="selected" value="Air">Air</option>
-                                                                    <option value="Road">Road</option>
-                                                                    <option value="Train">Train</option>
-                                                                    <option value="Sea">Sea</option>
-                                                                </select></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackNormalBlue" align="right"><span
-                                                                        class="TrackMediumBlue">Dept time : </span>
-                                                            </td>
-                                                            <td>&nbsp;</td>
-                                                            <td><input name="Depttime" id="Depttime" maxlength="50"
-                                                                       size="20"
-                                                                       type="TEXT"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackNormalBlue" align="right">Destination
-                                                                Office:
-                                                            </td>
-                                                            <td>&nbsp;</td>
-                                                            <td><input name="Destination" id="Destination"
-                                                                       maxlength="50" size="40"
-                                                                       type="TEXT">
-                                                                <span class="REDLink">*</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackNormalBlue" align="right">Pickup Date :</td>
-                                                            <td>&nbsp;</td>
-                                                            <td>
-<!--                                                                <input name="Packupdate" id="Packupdate" readonly="True"-->
-<!--                                                                       style="cursor: text;" onClick="ds_sh(this);"-->
-<!--                                                                       maxlength="15"-->
-<!--                                                                       type="TEXT" value="">-->
-                                                                <input name="Packupdate" id="Packupdate"
-                                                                       style="cursor: text;"
-                                                                       placeholder="DD/MM/YYYY"
-                                                                        type="TEXT">
-                                                                <span class="REDLink">*</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackNormalBlue" align="right" valign="top">
-                                                                Pickup Time :
-                                                            </td>
-                                                            <td>&nbsp;</td>
-                                                            <td><input name="Pickuptime" id="Pickuptime" maxlength="50"
-                                                                       size="20"
-                                                                       type="TEXT"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackNormalBlue" align="right" valign="top">
-                                                                Status :
-                                                            </td>
-                                                            <td>&nbsp;</td>
-                                                            <td><select name="status" id="status">
-                                                                    <option selected="selected" value="In Transit">In
-                                                                        Transit
-                                                                    </option>
-                                                                </select></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="TrackNormalBlue" align="right" valign="top">
-                                                                Comments :
-                                                            </td>
-                                                            <td>&nbsp;</td>
-                                                            <td><textarea name="Comments" cols="40" rows="4"
-                                                                          id="Comments"></textarea>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="right">&nbsp;</td>
-                                                            <td>&nbsp;</td>
-                                                            <td><button class="btn btn-primary btn-sm" name="Submit" type="submit"
-                                                                       onClick="MM_validateForm('Shippername','','R','Shipperphone','','R','Receivername','','R','Receiverphone','','R','ConsignmentNo','','R','Weight','','R','Invoiceno','','R','Qnty','','RisNum','Totalfreight','','R','Pickuptime','','R','Shipperaddress','','R','Comments','','R','Weight','','RisNum','Totalfreight','','R');return document.MM_returnValue">Add Courier</button></td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;</td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                    <td background="images/boxrightBG.gif"></td>
-                                </tr>
-                                <tr>
-                                    <td width="18"><img src="images/boxbtmleftcorner.gif" alt="" height="12" width="18">
-                                    </td>
-                                    <td background="images/boxbtmBG.gif" width="734"></td>
-                                    <td width="18"><img src="images/boxbtmrightcorner.gif" alt="" height="12"
-                                                        width="18"></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <br>
-                        </form>
+                        </div>
 
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -518,7 +349,7 @@ $invoice_no = rand(1000,9999);
 <script src="js/main.js"></script>
 <!-- tawk chat JS
     ============================================ -->
-<script src="js/tawk-chat.js"></script>
+<!--<script src="js/tawk-chat.js"></script>-->
 <script>
     function validate(evt) {
         var theEvent = evt || window.event;
@@ -532,9 +363,9 @@ $invoice_no = rand(1000,9999);
             key = String.fromCharCode(key);
         }
         var regex = /[0-9]|\./;
-        if( !regex.test(key) ) {
+        if (!regex.test(key)) {
             theEvent.returnValue = false;
-            if(theEvent.preventDefault) theEvent.preventDefault();
+            if (theEvent.preventDefault) theEvent.preventDefault();
         }
     }
 </script>

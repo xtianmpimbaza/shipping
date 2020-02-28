@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a69fd137-fdba-44da-bb99-ddc13d5b4b2a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add-courier.php" beforeDir="false" afterPath="$PROJECT_DIR$/add-courier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/add-user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cancelled-shipments.php" beforeDir="false" afterPath="$PROJECT_DIR$/cancelled-shipments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shipments.php" beforeDir="false" afterPath="$PROJECT_DIR$/shipments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +49,7 @@
           <entry key="jpg" value="1" />
           <entry key="js" value="4" />
           <entry key="md" value="2" />
-          <entry key="php" value="69" />
+          <entry key="php" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -48,7 +59,7 @@
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="4" />
           <entry key="Markdown" value="2" />
-          <entry key="PHP" value="69" />
+          <entry key="PHP" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -56,7 +67,7 @@
           <entry key="css" value="148" />
           <entry key="html" value="23" />
           <entry key="md" value="109" />
-          <entry key="php" value="3635" />
+          <entry key="php" value="4511" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -64,7 +75,7 @@
           <entry key="CSS" value="148" />
           <entry key="HTML" value="23" />
           <entry key="Markdown" value="109" />
-          <entry key="PHP" value="3635" />
+          <entry key="PHP" value="4511" />
         </counts>
       </usages-collector>
     </session>
@@ -74,71 +85,57 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add-courier.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            <state relative-caret-position="347">
+              <caret line="755" column="118" selection-start-line="755" selection-start-column="118" selection-end-line="755" selection-end-column="118" />
+              <folding>
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="e#121#125#0" expanded="true" />
+                <element signature="e#125#129#0" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="e#197#201#1" expanded="true" />
+                <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="e#356#360#1" expanded="true" />
+                <element signature="n#style#0;n#td#4;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="e#428#432#0" expanded="true" />
+                <element signature="e#432#436#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="230" column="70" selection-start-line="230" selection-start-column="70" selection-end-line="230" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add-user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="99" column="32" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
+            <state relative-caret-position="195">
+              <caret line="349" column="17" lean-forward="true" selection-start-line="349" selection-start-column="17" selection-end-line="349" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dashboard.php">
+        <entry file="file://$PROJECT_DIR$/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library.php">
+        <entry file="file://$PROJECT_DIR$/allusers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="196" column="31" lean-forward="true" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-              <folding>
-                <element signature="e#8#37#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loader/dataloader.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#th#0;n#tr#0;n#table#0;n#font#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="177">
+              <caret line="97" column="103" selection-start-line="97" selection-start-column="95" selection-end-line="97" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -146,8 +143,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shipments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="135" selection-end-column="43" />
+            <state relative-caret-position="425">
+              <caret line="151" column="90" lean-forward="true" selection-start-line="145" selection-start-column="34" selection-end-line="151" selection-end-column="90" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/navbar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="75" column="25" lean-forward="true" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/allusers-admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="100" column="30" lean-forward="true" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cancelled-shipments.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="319" column="22" lean-forward="true" selection-start-line="319" selection-start-column="22" selection-end-line="319" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -163,21 +196,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Edit Shipment</find>
-      <find>Basic Example</find>
-      <find>update</find>
-      <find>Location</find>
-      <find>update-success.php</find>
-      <find>mark</find>
-      <find>btn</find>
-      <find>sign in</find>
-      <find>pending-shipments.phpl</find>
-      <find>pick</find>
-      <find>picker</find>
-      <find>pic</find>
-      <find>$pick_date</find>
-      <find>courier-add-success</find>
-      <find>All shipments</find>
       <find>acti</find>
       <find>logo</find>
       <find>Shipperemail</find>
@@ -192,7 +210,22 @@
       <find>load_graph</find>
       <find>this</find>
       <find>A summary of oday's shippings.</find>
+      <find>Add new shipment</find>
       <find>dbFetchRow</find>
+      <find>action</find>
+      <find>$cons_no</find>
+      <find>profi</find>
+      <find>profile</find>
+      <find>allusers</find>
+      <find>role</find>
+      <find>user</find>
+      <find>allusers-admin.php</find>
+      <find>tawk</find>
+      <find>$result</find>
+      <find>do</find>
+      <find>download</find>
+      <find>down</find>
+      <find>add co</find>
     </findStrings>
     <replaceStrings>
       <replace>0a2f5b</replace>
@@ -213,28 +246,30 @@
         <option value="$PROJECT_DIR$/edit-courier.html" />
         <option value="$PROJECT_DIR$/Cancelled-shipments.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/process.php" />
-        <option value="$PROJECT_DIR$/navbar.php" />
-        <option value="$PROJECT_DIR$/cancelled-shipments.php" />
         <option value="$PROJECT_DIR$/courier-add-success.php" />
         <option value="$PROJECT_DIR$/delivered-shipments.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/intransit-shipments.php" />
         <option value="$PROJECT_DIR$/pending-shipments.php" />
-        <option value="$PROJECT_DIR$/profile.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/footer.php" />
-        <option value="$PROJECT_DIR$/add-courier.php" />
         <option value="$PROJECT_DIR$/edit-courierb.php" />
         <option value="$PROJECT_DIR$/library.php" />
-        <option value="$PROJECT_DIR$/database.php" />
-        <option value="$PROJECT_DIR$/shipments.php" />
-        <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/loader/dataloader.php" />
         <option value="$PROJECT_DIR$/dashboard.php" />
+        <option value="$PROJECT_DIR$/footer.php" />
+        <option value="$PROJECT_DIR$/database.php" />
         <option value="$PROJECT_DIR$/add-user.php" />
+        <option value="$PROJECT_DIR$/profile.php" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/shipments.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/navbar.php" />
+        <option value="$PROJECT_DIR$/allusers.php" />
+        <option value="$PROJECT_DIR$/allusers-admin.php" />
+        <option value="$PROJECT_DIR$/cancelled-shipments.php" />
+        <option value="$PROJECT_DIR$/add-courier.php" />
+        <option value="$PROJECT_DIR$/header.php" />
       </list>
     </option>
   </component>
@@ -321,18 +356,18 @@
       <workItem from="1582652743586" duration="1794000" />
       <workItem from="1582742310576" duration="1219000" />
       <workItem from="1582747037542" duration="587000" />
-      <workItem from="1582797685446" duration="15168000" />
+      <workItem from="1582797685446" duration="30363000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80966000" />
+    <option name="totallyTimeSpent" value="96161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25189108" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19742814" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -395,13 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/process.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6388">
-          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -409,20 +437,6 @@
             <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="46" column="27" lean-forward="true" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cancelled-shipments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="204" column="25" selection-start-line="204" selection-start-column="25" selection-end-line="204" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -441,20 +455,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php" />
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="69" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/intransit-shipments.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -469,27 +469,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/invoice.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#5#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -521,40 +504,6 @@
     <entry file="file://$PROJECT_DIR$/js/tawk-chat.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/edit-courierb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shipments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="135" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <element signature="e#8#37#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#th#0;n#tr#0;n#table#0;n#font#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_9.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -579,24 +528,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library.php">
+    <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="196" column="31" lean-forward="true" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
+        <state relative-caret-position="85">
+          <caret line="5" column="106" selection-start-line="5" selection-start-column="106" selection-end-line="5" selection-end-column="106" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add-courier.php">
+    <entry file="file://$PROJECT_DIR$/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        <state relative-caret-position="255">
+          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="e#8#37#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="243" column="8" lean-forward="true" selection-start-line="243" selection-start-column="8" selection-end-line="243" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit-courierb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#121#125#0" expanded="true" />
+            <element signature="e#125#129#0" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#197#201#1" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#356#360#1" expanded="true" />
+            <element signature="n#style#0;n#td#4;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#428#432#0" expanded="true" />
+            <element signature="e#432#436#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shipments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="151" column="90" lean-forward="true" selection-start-line="145" selection-start-column="34" selection-end-line="151" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="75" column="25" lean-forward="true" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/add-user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="99" column="32" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
+        <state relative-caret-position="195">
+          <caret line="349" column="17" lean-forward="true" selection-start-line="349" selection-start-column="17" selection-end-line="349" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/allusers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="97" column="103" selection-start-line="97" selection-start-column="95" selection-end-line="97" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/allusers-admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="100" column="30" lean-forward="true" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cancelled-shipments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="319" column="22" lean-forward="true" selection-start-line="319" selection-start-column="22" selection-end-line="319" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add-courier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="755" column="118" selection-start-line="755" selection-start-column="118" selection-end-line="755" selection-end-column="118" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#121#125#0" expanded="true" />
+            <element signature="e#125#129#0" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#197#201#1" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#356#360#1" expanded="true" />
+            <element signature="n#style#0;n#td#4;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#428#432#0" expanded="true" />
+            <element signature="e#432#436#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="230" column="70" selection-start-line="230" selection-start-column="70" selection-end-line="230" selection-end-column="70" />
         </state>
       </provider>
     </entry>

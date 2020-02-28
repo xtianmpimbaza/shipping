@@ -1,14 +1,11 @@
 <?php
 session_start();
-require_once('database.php');
+//require_once('database.php');
 require_once('library.php');
 isUser();
 
-$route = "shipments";
-$sql = "SELECT cid, cons_no, ship_name, rev_name, pick_date, pick_time, type, qty, status
-		FROM tbl_courier
-		WHERE 1
-		ORDER BY cid DESC";
+$route = "allusers";
+$sql = "SELECT * FROM tbl_courier_officers WHERE 1 ORDER BY cid DESC";
 $result = dbQuery($sql);
 
 ?>
@@ -98,8 +95,8 @@ $result = dbQuery($sql);
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
                             <div class="breadcomb-report">
-                                <button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn">
-                                    <i class="notika-icon notika-sent"></i></button>
+<!--                                <button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn">-->
+<!--                                    <i class="notika-icon notika-sent"></i></button>-->
                             </div>
                         </div>
                     </div>
@@ -117,59 +114,45 @@ $result = dbQuery($sql);
                 <div class="data-table-list">
 
                     <div class="">
-                        <table id="data-table-basic" class="table table-striped table-hover table-bordered table-responsive">
+                        <table id="data-table-basic"
+                               class="table table-striped table-hover table-bordered table-responsive">
                             <thead>
                             <tr>
                                 <th class="newtext" bgcolor="#EDEDED">#</th>
-                                <th class="newtext" bgcolor="#EDEDED">Consignment No</th>
-                                <th class="newtext" bgcolor="#EDEDED">Sender</th>
-                                <th class="newtext" bgcolor="#EDEDED">Receiver</th>
-                                <th class="newtext" bgcolor="#EDEDED">Pickup Date</th>
-                                <th class="newtext" bgcolor="#EDEDED">Type</th>
-                                <th class="newtext" bgcolor="#EDEDED">Quantity</th>
-                                <th class="newtext" bgcolor="#EDEDED">Status</th>
-                                <th class="newtext" bgcolor="#EDEDED">Print</th>
+                                <th class="newtext" bgcolor="#EDEDED">Name</th>
+                                <th class="newtext" bgcolor="#EDEDED">Email</th>
+                                <th class="newtext" bgcolor="#EDEDED">Phone</th>
+                                <th class="newtext" bgcolor="#EDEDED">Address</th>
+                                <th class="newtext" bgcolor="#EDEDED">Office</th>
                             </tr>
                             </thead>
                             <tbody>
                             <?php
 
                             while ($data = dbFetchAssoc($result)) {
-                            extract($data);
-                            ?>
-                                <tr onMouseOver="this.bgColor='gold';" onMouseOut="this.bgColor='#FFFFFF';" bgcolor="#FFFFFF">
-
-                                    <td class="gentxt" align="center">
-                                        <a href="edit-courierb.php?cid=<?php echo $cid; ?>">
-                                            <img src="images/edit_icon.gif" border="0" height="20" width="20"></a>
-                                    </td>
-                                    <td class="gentxt"><?php echo $data['cons_no']; ?></td>
-                                    <td class="gentxt"><?php echo $data['ship_name']; ?></td>
-                                    <td class="gentxt"><?php echo $data['rev_name']; ?></td>
-                                    <td class="gentxt"><?php echo $data['pick_date']; ?></td>
-                                    <td class="gentxt"><?php echo $data['type']; ?></td>
-                                    <td class="gentxt"><?php echo $data['qty']; ?></td>
-                                    <td class="gentxt"><?php echo $data['status']; ?></td>
-                                    <td class="gentxt" align="center">
-                                        <a href="invoice.php?cid=<?php echo $cid; ?>">
-                                            <img src="images/printer.png" border="0" height="20" width="20"></a>
-                                    </td>
+                                extract($data);
+                                ?>
+                                <tr onMouseOver="this.bgColor='gold';" onMouseOut="this.bgColor='#FFFFFF';"
+                                    bgcolor="#FFFFFF">
+                                    <td class="gentxt"><?php echo $data['cid']; ?></td>
+                                    <td class="gentxt"><?php echo $data['officer_name']; ?></td>
+                                    <td class="gentxt"><?php echo $data['email']; ?></td>
+                                    <td class="gentxt"><?php echo $data['ph_no']; ?></td>
+                                    <td class="gentxt"><?php echo $data['address']; ?></td>
+                                    <td class="gentxt"><?php echo $data['office']; ?></td>
                                 </tr>
                                 <?php
-                            }//while
+                            }
                             ?>
                             </tbody>
                             <tfoot>
                             <tr>
                                 <th class="newtext" bgcolor="#EDEDED">#</th>
-                                <th class="newtext" bgcolor="#EDEDED">Consignment No</th>
-                                <th class="newtext" bgcolor="#EDEDED">Sender</th>
-                                <th class="newtext" bgcolor="#EDEDED">Receiver</th>
-                                <th class="newtext" bgcolor="#EDEDED">Pickup Date/e</th>
-                                <th class="newtext" bgcolor="#EDEDED">Type</th>
-                                <th class="newtext" bgcolor="#EDEDED">Quantity</th>
-                                <th class="newtext" bgcolor="#EDEDED">Status</th>
-                                <th class="newtext" bgcolor="#EDEDED">Print</th>
+                                <th class="newtext" bgcolor="#EDEDED">Name</th>
+                                <th class="newtext" bgcolor="#EDEDED">Email</th>
+                                <th class="newtext" bgcolor="#EDEDED">Phone</th>
+                                <th class="newtext" bgcolor="#EDEDED">Address</th>
+                                <th class="newtext" bgcolor="#EDEDED">Office</th>
                             </tr>
                             </tfoot>
                         </table>
@@ -246,9 +229,6 @@ $result = dbQuery($sql);
 <!-- main JS
     ============================================ -->
 <script src="js/main.js"></script>
-<!-- tawk chat JS
-    ============================================ -->
-<script src="js/tawk-chat.js"></script>
 </body>
 
 </html>

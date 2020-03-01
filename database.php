@@ -1,7 +1,5 @@
 <?php
-
-
-// database connection config
+// ---------------------- database connection config
 //$dbHost = 'localhost';
 //$dbUser = 'sageacad';
 //$dbPass = 'Academia@2020';
@@ -20,6 +18,17 @@ function dbQuery($sql)
 	global $dbConn;
 	$result = mysqli_query($dbConn,$sql) or die(mysqli_error($dbConn));
 	return $result;
+}
+function dbQueryIdBack($sql)
+{
+	global $dbConn;
+	$result = mysqli_query($dbConn,$sql) or die(mysqli_error($dbConn));
+	if ($result){
+        $last_id = mysqli_insert_id($dbConn);
+        return $last_id;
+    }else{
+        return mysqli_error($dbConn);
+    }
 }
 
 function dbAffectedRows()

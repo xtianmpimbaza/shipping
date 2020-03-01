@@ -110,8 +110,8 @@ if (!empty($profile)) {
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
                             <div class="breadcomb-report">
-                                <button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn">
-                                    <i class="notika-icon notika-sent"></i></button>
+                                <a href="dashboard.php"><button data-toggle="tooltip" data-placement="left" title="Home" class="btn">
+                                        <i class="notika-icon notika-house"></i></button></a>
                             </div>
                         </div>
                     </div>

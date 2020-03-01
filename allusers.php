@@ -88,8 +88,8 @@ $result = dbQuery($sql);
                                     <i class="notika-icon notika-windows"></i>
                                 </div>
                                 <div class="breadcomb-ctn">
-                                    <h2>All shipments</h2>
-                                    <p>All shipments all time</p>
+                                    <h2>All Users</h2>
+                                    <p>All users</p>
                                 </div>
                             </div>
                         </div>

@@ -420,7 +420,8 @@ $invoice_no = rand(1000, 9999);
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
                             <div class="breadcomb-report">
-
+                                <a href="shipments.php"><button data-toggle="tooltip" data-placement="left" title="View shipments" class="btn">
+                                        <i class="notika-icon notika-flag"></i></button></a>
                             </div>
                         </div>
                     </div>
@@ -746,20 +747,20 @@ $invoice_no = rand(1000, 9999);
                                                                     Add Courier
                                                                 </button>
                                                                 </span>
-                                                                <span class="" style=""><button class="btn btn-warning btn-sm"
-                                                                              name="Submit"
+                                                                <span class="" style=""><button class="btn btn-success btn-sm"
+                                                                              name="print"
                                                                               type="submit"
                                                                               onClick="MM_validateForm('Shippername','','R','Shipperphone','','R','Receivername','','R','Receiverphone','','R','ConsignmentNo','','R','Weight','','R','Invoiceno','','R','Qnty','','RisNum','Totalfreight','','R','Pickuptime','','R','Shipperaddress','','R','Comments','','R','Weight','','RisNum','Totalfreight','','R');return document.MM_returnValue">
                                                                     Print
                                                                 </button>
                                                                 </span>
-                                                                <span class="" style=""><button class="btn btn-success btn-sm"
-                                                                              name="Submit"
-                                                                              type="submit"
-                                                                              onClick="MM_validateForm('Shippername','','R','Shipperphone','','R','Receivername','','R','Receiverphone','','R','ConsignmentNo','','R','Weight','','R','Invoiceno','','R','Qnty','','RisNum','Totalfreight','','R','Pickuptime','','R','Shipperaddress','','R','Comments','','R','Weight','','RisNum','Totalfreight','','R');return document.MM_returnValue">
-                                                                    Send mail
-                                                                </button>
-                                                                </span>
+<!--                                                                <span class="" style=""><button class="btn btn-warning btn-sm"-->
+<!--                                                                              name="Submit"-->
+<!--                                                                              type="submit"-->
+<!--                                                                              onClick="MM_validateForm('Shippername','','R','Shipperphone','','R','Receivername','','R','Receiverphone','','R','ConsignmentNo','','R','Weight','','R','Invoiceno','','R','Qnty','','RisNum','Totalfreight','','R','Pickuptime','','R','Shipperaddress','','R','Comments','','R','Weight','','RisNum','Totalfreight','','R');return document.MM_returnValue">-->
+<!--                                                                    Send mail-->
+<!--                                                                </button>-->
+<!--                                                                </span>-->
 
                                                             </td>
                                                         </tr>

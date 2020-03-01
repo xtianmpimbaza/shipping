@@ -95,8 +95,8 @@ $result = dbQuery($sql);
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
                             <div class="breadcomb-report">
-<!--                                <button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn">-->
-<!--                                    <i class="notika-icon notika-sent"></i></button>-->
+                                <a href="add-user.php"><button data-toggle="tooltip" data-placement="left" title="Add users" class="btn">
+                                        <i class="notika-icon notika-form"></i></button></a>
                             </div>
                         </div>
                     </div>
@@ -142,7 +142,7 @@ $result = dbQuery($sql);
                                     <td class="gentxt"><?php echo $data['address']; ?></td>
                                     <td class="gentxt"><?php echo $data['office']; ?></td>
                                     <td class="gentxt" align="center">
-                                        <a href="#">
+                                        <a href="edituser.php?cid=<?php echo $cid; ?>">
                                             <img src="images/edit_icon.gif" border="0" height="20" width="20"></a>
                                     </td>
                                 </tr>

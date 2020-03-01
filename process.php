@@ -240,12 +240,17 @@ function addCons()
 
     $sql = "INSERT INTO tbl_courier (cons_no, ship_name, phone, s_add, rev_name, r_phone, r_add, zone, type, service, weight, invice_no, qty, book_mode, freight, mode, pick_date, pick_time, price, status, comments, book_date )
 			VALUES('$ConsignmentNo', '$Shippername','$Shipperphone', '$Shipperaddress', '$Receivername','$Receiverphone','$Receiveraddress', '$zone', '$Shiptype', '$service', $Weight , '$Invoiceno', $Qnty, '$Bookingmode', '$Totalfreight', '$Mode', '$Packupdate', '$Pickuptime', '$px', '$status', '$Comments', NOW())";
-    //echo $sql;
-    dbQuery($sql);
-//    dbQuery($sql);
-    header('Location: shipments.php');
+
+
+    if (isset($_POST['print'])){
+        $last_id = dbQueryIdBack($sql);
+        header('Location: invoice.php?cid='.$last_id);
+    }else{
+        dbQuery($sql);
+        header('Location: shipments.php');
+    }
+
 //    print_r($reslt);
-//    echo $Ship;
 }//addCons
 
 function markDelivered()

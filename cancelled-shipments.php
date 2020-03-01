@@ -3,7 +3,7 @@ session_start();
 require_once('database.php');
 require_once('library.php');
 isUser();
-$route = "cancelled-shipments";
+$route = "shipments";
 
 $sql = "SELECT cid, cons_no, ship_name, rev_name, pick_date, pick_time, status
 		FROM tbl_courier
@@ -281,8 +281,8 @@ dbQuery($sql3);
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
                             <div class="breadcomb-report">
-                                <button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn">
-                                    <i class="notika-icon notika-sent"></i></button>
+                                <a href="add-courier.php"><button data-toggle="tooltip" data-placement="left" title="New Shipment" class="btn">
+                                        <i class="notika-icon notika-flag"></i></button></a>
                             </div>
                         </div>
                     </div>
@@ -425,7 +425,7 @@ dbQuery($sql3);
 <script src="js/main.js"></script>
 <!-- tawk chat JS
     ============================================ -->
-<script src="js/tawk-chat.js"></script>
+<!--<script src="js/tawk-chat.js"></script>-->
 </body>
 
 </html>

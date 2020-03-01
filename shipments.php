@@ -98,8 +98,8 @@ $result = dbQuery($sql);
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
                             <div class="breadcomb-report">
-                                <button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn">
-                                    <i class="notika-icon notika-sent"></i></button>
+                                <a href="add-courier.php"><button data-toggle="tooltip" data-placement="left" title="New Shipment" class="btn">
+                                    <i class="notika-icon notika-flag"></i></button></a>
                             </div>
                         </div>
                     </div>
@@ -156,7 +156,7 @@ $result = dbQuery($sql);
                                     </td>
                                 </tr>
                                 <?php
-                            }//while
+                            }
                             ?>
                             </tbody>
                             <tfoot>
@@ -246,9 +246,6 @@ $result = dbQuery($sql);
 <!-- main JS
     ============================================ -->
 <script src="js/main.js"></script>
-<!-- tawk chat JS
-    ============================================ -->
-<script src="js/tawk-chat.js"></script>
 </body>
 
 </html>

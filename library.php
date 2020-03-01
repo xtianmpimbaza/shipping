@@ -131,7 +131,8 @@ function get_rand_id($length)
 
 function checkUser($un, $pwd)
 {
-    $sql = "SELECT * FROM tbl_courier_officers WHERE email = '$un' AND off_pwd = '$pwd'";
+    $pass = hash('sha256', $pwd);
+    $sql = "SELECT * FROM tbl_courier_officers WHERE email = '$un' AND off_pwd = '$pass'";
     $resulta = dbQuery($sql);
     $num = dbNumRows($resulta);
     if ($num >= 1) {

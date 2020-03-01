@@ -1,23 +1,33 @@
 <?php
 session_start();
+require_once('database.php');
 require_once('library.php');
+isUser();
+$cid = (int)$_GET['cid'];
+$route = "";
 
-$route = "add-user";
+$sql = "SELECT * FROM tbl_courier_officers WHERE cid = $cid";
+$result = dbQuery($sql);
+while ($data = dbFetchAssoc($result)) {
+    extract($data);
+}
 
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
-    $pass = hash('sha256', $_POST['password']);
-    $full_namespass = $_POST['full_names'];
+    $full_names = $_POST['full_names'];
     $address = $_POST['address'];
     $phone_number = $_POST['phone_number'];
     $office = $_POST['office'];
-    $user_type = $_POST['user_type'];
 
-    $sql = "INSERT INTO tbl_courier_officers (officer_name, off_pwd, address, email, ph_no, office, user_type )
-			VALUES('$full_namespass', '$pass','$address', '$email', '$phone_number','$office','$user_type')";
+    $sql = "UPDATE tbl_courier_officers 
+				SET officer_name ='$full_names', address ='$address', email ='$email', ph_no ='$phone_number', office ='$office'
+				WHERE cid = $cid";
+
     $result = dbQuery($sql);
     if ($result == 1){
-        $error = "Saved successifully";
+        header('Location: allusers-admin.php');
+    }else{
+        $error = "Failed, contact system asmin";
     }
 }
 ?>
@@ -111,7 +121,7 @@ if (isset($_POST['submit'])) {
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
                             <div class="breadcomb-report">
-                                <a href="<?php echo $_SESSION['user_type'] == "admin-role" ? "allusers-admin.php" : "allusers.php"; ?>"><button data-toggle="tooltip" data-placement="left" title="View users" class="btn">
+                                <a href="allusers-admin.php"><button data-toggle="tooltip" data-placement="left" title="View users" class="btn">
                                         <i class="notika-icon notika-form"></i></button></a>
                             </div>
                         </div>
@@ -148,9 +158,8 @@ if (isset($_POST['submit'])) {
                                                     </div>
                                                     <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
                                                         <div class="nk-int-st">
-                                                            <input type="text" class="form-control input-sm" name="full_names"
-                                                                   placeholder="Enter Full Names"
-                                                                   required="required">
+                                                            <input type="text" class="form-control input-sm" name="full_names" value="<?php echo $officer_name; ?>"
+                                                                   placeholder="Enter Full Names">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -165,6 +174,7 @@ if (isset($_POST['submit'])) {
                                                     <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
                                                         <div class="nk-int-st">
                                                             <input type="text" class="form-control" name="phone_number"
+                                                                   value="<?php echo $ph_no; ?>"
                                                                    placeholder="Mobile Number"
                                                                    required="required">
                                                         </div>
@@ -181,6 +191,7 @@ if (isset($_POST['submit'])) {
                                                     <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
                                                         <div class="nk-int-st">
                                                             <input type="text" class="form-control" name="address"
+                                                                   value="<?php echo $address; ?>"
                                                                    placeholder="Address"
                                                                    required="required">
                                                         </div>
@@ -197,6 +208,7 @@ if (isset($_POST['submit'])) {
                                                     <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
                                                         <div class="nk-int-st">
                                                             <input class="form-control" name="office"
+                                                                   value="<?php echo $office; ?>"
                                                                    placeholder="Office" required="required" type="text">
                                                         </div>
                                                     </div>
@@ -212,50 +224,10 @@ if (isset($_POST['submit'])) {
                                                     </div>
                                                     <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
                                                         <div class="nk-int-st">
-                                                            <input type="email" class="form-control input-sm" name="email"
-                                                                   placeholder="Enter Email"
-                                                                   required="required">
+                                                            <input type="text" class="form-control input-sm" name="email"
+                                                                   value="<?php echo $email; ?>"
+                                                                   placeholder="Enter Email">
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-example-int form-horizental mg-t-15">
-                                            <div class="form-group">
-                                                <div class="row">
-                                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                                        <label class="hrzn-fm">Password :</label>
-                                                    </div>
-                                                    <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
-                                                        <div class="nk-int-st">
-                                                            <input type="text" class="form-control input-sm" name="password"
-                                                                   placeholder="Password"
-                                                                   required="required">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-example-int form-horizental mg-t-15">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                                    <label class="hrzn-fm">Role :</label>
-                                                </div>
-                                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio"
-                                                               name="user_type" id="exampleRadios1" value="admin-role"
-                                                               checked>
-                                                        <label class="form-check-label" for="exampleRadios1">
-                                                            Admin
-                                                        </label>
-                                                        <input class="form-check-input" type="radio"
-                                                               name="user_type" id="exampleRadios2" value="officer">
-                                                        <label class="form-check-label" for="exampleRadios2">
-                                                            Officer
-                                                        </label>
-
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -374,6 +346,7 @@ if (isset($_POST['submit'])) {
             if (theEvent.preventDefault) theEvent.preventDefault();
         }
     }
+
 </script>
 </body>
 

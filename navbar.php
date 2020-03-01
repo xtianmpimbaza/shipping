@@ -57,14 +57,14 @@
                             Home</a>
                     </li>
                     <li class="<?php echo $route == "shipments" ? "active" : ""; ?>">
-                        <a data-toggle="tab" href="#shipments"><i class="notika-icon notika-"></i> Shipments</a>
+                        <a data-toggle="tab" href="#shipments"><i class="notika-icon notika-flag"></i> Shipments</a>
                     </li>
                     </li>
                     <li class="<?php echo $route == "add-courier" ? "active" : ""; ?>">
-                        <a data-toggle="tab" href="#addnew"><i class="notika-icon notika-windows"></i> Add New</a>
+                        <a data-toggle="tab" href="#addnew"><i class="notika-icon notika-app"></i> Add New</a>
                     </li>
                     <li class="<?php echo $route == "profile" ? "active" : ""; ?>">
-                        <a href="profile.php"><i class="notika-icon notika-form"></i> Profile</a>
+                        <a href="profile.php"><i class="glyphicon glyphicon-user"></i> Profile</a>
                     </li>
                     <li class="<?php echo $route == "allusers" ? "active" : ""; ?>">
                         <a href="<?php echo $_SESSION['user_type'] == "admin-role" ? "allusers-admin.php" : "allusers.php"; ?>"><i
@@ -72,7 +72,7 @@
                     </li>
 
                     <li>
-                        <a href="logout.php"><i class="notika-icon notika-app"></i> Logout</a>
+                        <a href="logout.php"><i class="glyphicon glyphicon-log-out"></i> Logout</a>
                     </li>
                 </ul>
                 <div class="tab-content custom-menu-content">
